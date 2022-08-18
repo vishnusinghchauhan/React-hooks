@@ -11,8 +11,12 @@ import CustomHook from "./CustomHook/CustomHook";
 function App() {
   return (
     <div className="App">
+      <UseReducer />
+      {/* <UseRef /> */}
+      {/* <UseEffect /> */}
+      {/* <UseState /> */}
       {/* <CustomHook />
-      <UseState /> */}
+       */}
       {/* <UseReducer />
       <UseMemo />
       <UseCallback />

@@ -9,8 +9,12 @@ export default function CallBackTutorial() {
     setCount((c) => c + 1);
   };
   const addTodo = useCallback(() => {
-    setTodos((t) => [...t, "New Todo"]);
+    setTodos((t) => [...t, "Add new Data"]);
   }, [todos]);
+
+  // const addTodo = () => {
+  //   setTodos((t) => [...t, "Add new Data"]);
+  // };
 
   return (
     <>

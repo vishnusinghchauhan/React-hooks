@@ -3,24 +3,25 @@ import axios from "axios";
 
 function UseEffect() {
   const [data, setData] = useState("");
-  const [count, setCount] = useState(1);
+  const [apiValue, setApiValue] = useState(1);
 
   useEffect(() => {
+    console.log("getting data for", apiValue);
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${count}`)
+      .get(`https://jsonplaceholder.typicode.com/posts/${apiValue}`)
       .then((response) => {
         setData(response.data);
         console.log("API IS CALLED");
       });
-  }, [count]);
+  }, [apiValue]);
 
   return (
     <div>
       <h1>{data.title}</h1>
-      <h1>Getting data fpr API {count}</h1>
+      <h1>Getting data fpr API {apiValue}</h1>
       <button
         onClick={() => {
-          setCount(count + 1);
+          setApiValue(apiValue + 1);
         }}
       >
         Get Next API Data

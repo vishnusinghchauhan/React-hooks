@@ -18,7 +18,7 @@ const UseState = () => {
 
   return (
     <div>
-      <h1>
+      {/* <h1>
         My favorite color is <span style={{ color: color }}>{color}</span>
       </h1>
       <button type="button" onClick={() => setColor("blue")}>
@@ -29,7 +29,7 @@ const UseState = () => {
       </button>
       <button type="button" onClick={() => setColor("green")}>
         green
-      </button>
+      </button> */}
       <hr />
       <input
         type="text"
@@ -56,6 +56,7 @@ const UseState = () => {
       <p>firstName {profile.firstName}</p>
       <p>lastName {profile.lastName}</p>
       <p>age {profile.age}.</p>
+      
     </div>
   );
 };
