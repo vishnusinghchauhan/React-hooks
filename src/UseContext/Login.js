@@ -4,9 +4,9 @@ import { AppContext } from "./UseContext";
 function Login() {
   const { setUsername } = useContext(AppContext);
   const { setPassword } = useContext(AppContext);
-
   return (
     <div>
+      <h1>Login Component</h1>
       <input
         placeholder="user name"
         onChange={(event) => {

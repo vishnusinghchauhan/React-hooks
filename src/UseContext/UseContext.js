@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import Login from "./Login";
-import User from "./User";
+import Dashboard from "./Dashboard";
 
 export const AppContext = createContext(null);
 
@@ -9,11 +9,14 @@ function UseContext() {
   const [password, setPassword] = useState("");
 
   return (
-    <AppContext.Provider
-      value={{ username, setUsername, password, setPassword }}
-    >
-      <Login /> <User />
-    </AppContext.Provider>
+    <>
+      <AppContext.Provider
+        value={{ username, password, setUsername, setPassword }}
+      >
+        <Login />
+        <Dashboard />
+      </AppContext.Provider>
+    </>
   );
 }
 
